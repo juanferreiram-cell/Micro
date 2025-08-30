@@ -1,0 +1,40 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\juanm\Desktop\Cuarto Semestre\Micro\Contadordownup\Contadordownup\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\juanm\Desktop\Cuarto Semestre\Micro\Contadordownup\Contadordownup\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\juanm\Desktop\Cuarto Semestre\Micro\Contadordownup\Contadordownup\Debug\Contadordownup.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Contadordownup.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Contadordownup.map</FILE>
+  <FILE>Contadordownup.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <Inicio><FILE>C:\Users\juanm\Desktop\Cuarto Semestre\Micro\Contadordownup\Contadordownup\main.asm</FILE><LINE>29</LINE></Inicio>
+  <INT0_dummy><FILE>C:\Users\juanm\Desktop\Cuarto Semestre\Micro\Contadordownup\Contadordownup\main.asm</FILE><LINE>113</LINE></INT0_dummy>
+  <INT1_dummy><FILE>C:\Users\juanm\Desktop\Cuarto Semestre\Micro\Contadordownup\Contadordownup\main.asm</FILE><LINE>114</LINE></INT1_dummy>
+  <PCINT0_ISR><FILE>C:\Users\juanm\Desktop\Cuarto Semestre\Micro\Contadordownup\Contadordownup\main.asm</FILE><LINE>96</LINE></PCINT0_ISR>
+  <TIMER1_OVF_ISR><FILE>C:\Users\juanm\Desktop\Cuarto Semestre\Micro\Contadordownup\Contadordownup\main.asm</FILE><LINE>104</LINE></TIMER1_OVF_ISR>
+  <Main><FILE>C:\Users\juanm\Desktop\Cuarto Semestre\Micro\Contadordownup\Contadordownup\main.asm</FILE><LINE>80</LINE></Main>
+  <CheckDown><FILE>C:\Users\juanm\Desktop\Cuarto Semestre\Micro\Contadordownup\Contadordownup\main.asm</FILE><LINE>88</LINE></CheckDown>
+  <ContarUp><FILE>C:\Users\juanm\Desktop\Cuarto Semestre\Micro\Contadordownup\Contadordownup\main.asm</FILE><LINE>123</LINE></ContarUp>
+  <ContarDown><FILE>C:\Users\juanm\Desktop\Cuarto Semestre\Micro\Contadordownup\Contadordownup\main.asm</FILE><LINE>157</LINE></ContarDown>
+  <DP><FILE>C:\Users\juanm\Desktop\Cuarto Semestre\Micro\Contadordownup\Contadordownup\main.asm</FILE><LINE>117</LINE></DP>
+  <Delay><FILE>C:\Users\juanm\Desktop\Cuarto Semestre\Micro\Contadordownup\Contadordownup\main.asm</FILE><LINE>191</LINE></Delay>
+  <Delay_L1><FILE>C:\Users\juanm\Desktop\Cuarto Semestre\Micro\Contadordownup\Contadordownup\main.asm</FILE><LINE>194</LINE></Delay_L1>
+  <Delay_L0><FILE>C:\Users\juanm\Desktop\Cuarto Semestre\Micro\Contadordownup\Contadordownup\main.asm</FILE><LINE>196</LINE></Delay_L0>
+ </LABELS>
+</ASSEMBLER_INFO>
