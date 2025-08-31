@@ -1,7 +1,34 @@
-; ATmega328P + MAX7219 (8x8)
-; INT0 (PD2): siguiente letra
-; INT1 (PD3): letra anterior
-; PB3 MOSI, PB5 SCK, PB2 SS/LOAD
+﻿; Programa en ASM para ATmega328P que muestra, letra por letra, el mensaje "YO AMO DORMIR"
+; en una matriz 8x8 controlada por el driver MAX7219.  Se usa SPI por hardware para simplificar
+; el manejo de la matriz y evitar multiplexado por software.
+;
+; Controles por interrupción:
+; - INT0 (PD2): avanza a la siguiente letra (→).
+; - INT1 (PD3): retrocede a la letra anterior (←).
+; No se hace scroll continuo: se muestra una letra, se borra y se muestra la siguiente.
+; Se añadió un retardo corto en cada ISR como antirrebote básico.
+;
+; Conexiones (Arduino UNO / PICsimlab):
+; - MAX7219: DIN→PB3 (MOSI / D11), CLK→PB5 (SCK / D13), CS/LOAD→PB2 (SS / D10), Vcc y GND.
+; - Pulsadores: a PD2 (D2) e INT0 y PD3 (D3) e INT1, con pull-up interno activado y pulsando a GND.
+;
+;
+; Importante sobre el hardware:
+; - Este código está ADAPTADO para la matriz 8x8 con controlador **MAX7219** (la que trae el simulador
+;   **PICsimlab**).  El kit Arduino suele incluir una matriz **1088AS** “cruda” (sin MAX7219); para esa
+;   matriz habría que hacer multiplexado de filas/columnas y otro mapeo de pines.  Por eso acá se usa
+;   MAX7219: simplifica la interfaz (2 registros por escritura) y es 100% compatible con PICsimlab.
+;
+; Ajustes rápidos:
+; - Brillo: se configura con el registro INTENSITY del MAX7219 (0x0A, valor 0x00–0x0F).
+; - Si la letra se ve invertida/espejada, basta con cambiar el orden de filas o rotar bits en las
+;   constantes de cada carácter.
+; - Los flancos de INT0/INT1 están configurados como ascendentes; si tus botones van a GND, también
+;   podés usar flanco descendente sin tocar el resto del código.
+;
+; Objetivo: mantener el código lo más simple posible para compilar en Microchip Studio y simular
+;           en PICsimlab con el módulo MAX7219.
+
 
 .INCLUDE "m328pdef.inc"
 
